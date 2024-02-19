@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>eikon parcel starter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <form class="exemple" action="/ma-page-de-traitement" method="post">
+      <ul>
+        <li>
+          <input type="text" id="name" name="user_name" placeholder="Prénom"/>
+        </li>
+        <li>
+          <input type="email" id="mail" name="user_mail" placeholder="Nom"/>
+        </li>
+        <script src="js/main.js" type="module"></script>
+        <form method="post">
+            <label><input type="radio" name="radio" />Français</label>
+            <br>
+            <label><input type="radio" name="radio" />Allemand</label>
+            <br>
+            <label><input type="radio" name="radio" />Italien</label>
+            <ul>
+              <li>
+                <input type="checkbox"/>
+                <label for="carottes">S’abonner à la newsletter</label>
+              </li>
+              <li>
+                <input type="checkbox"/>
+                <label for="carottes">J’accepte les conditions générales</label>
+              </li>
+            </ul>
+          <select id="simple" name="simple">
+            <option>France</option>
+            <option selected>Suisse</option>
+            <option>Allemagne</option>
+          </select>
+        <li>
+          <label for="msg">Remarque&nbsp;:</label>
+        </li>
+        <li>
+          <textarea id="msg" name="user_message"></textarea>
+        </li>
+      </ul>
+    </form>
+  </body>
+</html>
