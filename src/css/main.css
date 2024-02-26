@@ -1,18 +1,10 @@
-/* ====================================
-// css variables
-// ==================================== */
-
 :root {
-  
+  --black-color: #000;
+  --grey-color: #767676;
 }
-
-/* ====================================
-// reset rules
-// ==================================== */
 
 * {
   box-sizing: border-box;
-  margin: 0;
   padding: 0;
 }
 
@@ -24,12 +16,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-
   font-size: 1rem;
   line-height: 1.25;
-  max-width: 320px;
+  font-family: Roboto;
+  font-size: 18px;
+  padding: 30px 34px;
   margin: auto;
-  
 }
 
 a {
@@ -43,8 +35,49 @@ video {
   vertical-align: middle;
 }
 
+.language,
+.checkbox,
+.input-note {
+  display: flex;
+}
 
+.input {
+  margin-bottom: 34px;
+}
 
-/* ====================================
-// base rules
-// ==================================== */
+.input-name input {
+  width: 195px;
+  height: 27px;
+  flex-shrink: 0;
+  border-radius: 0%;
+  font-size: 18px;
+  color: var(--grey-color);
+  border: 1px solid var(--grey-color);
+  padding: 0 5px;
+}
+
+label {
+  margin-left: 8px;
+}
+
+select {
+  width: 108px;
+  height: 25px;
+  border-radius: 0%;
+  font-size: 18px;
+  padding: 0 5px;
+}
+
+.input-note {
+  flex-flow: column;
+}
+
+textarea {
+  width: 406px;
+  height: 150px;
+  justify-content: center;
+  align-items: center;
+  resize: none;
+  font-family: Roboto;
+  padding: 5px;
+}
