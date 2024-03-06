@@ -1,0 +1,188 @@
+/* ====================================
+// css variables
+// ==================================== */
+ 
+:root {
+  --black-color: #000;
+  --white-color: #fff;
+  --grey-color: #ababab;
+  --red-color: #f44335;
+}
+ 
+/* ====================================
+// reset rules
+// ==================================== */
+ 
+/* ====================================
+// base rules
+// ==================================== */
+ 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+ 
+html {
+  font-size: 16px;
+}
+ 
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-size: 1rem;
+  line-height: 1.25;
+  font-family: Roboto;
+  font-size: 16px;
+  padding: 30px 34px;
+}
+ 
+a {
+  color: inherit;
+}
+ 
+img,
+video {
+  max-inline-size: 100%;
+  block-size: auto;
+  vertical-align: middle;
+}
+ 
+.input-name {
+  margin: 0 20px;
+}
+ 
+.input {
+  margin-bottom: 34px;
+}
+ 
+.input-name input {
+  width: 195px;
+  height: 56px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  font-size: 16px;
+  color: var(--grey-color);
+  border: 1px solid var(--grey-color);
+  padding: 0 16px;
+  margin-right: 10px;
+}
+ 
+.input-name input:hover {
+  animation-name: name;
+  animation-duration: 0.5s;
+}
+ 
+@keyframes name {
+  0% {
+    border: 2px solid #f4423500;
+    background-color: #f4423500;
+  }
+  50% {
+    border: 2px solid #f44335;
+    background-color: #f4423540;
+  }
+  100% {
+    border: 2px solid #f4433500;
+    background-color: #f4423500;
+  }
+}
+ 
+label {
+  margin-left: 16px;
+}
+ 
+.radio,
+.switch {
+  display: flex;
+  padding-bottom: 13px;
+  margin: 0;
+}
+ 
+.radio-placeholder {
+  display: inline-block; /* pour que le div soit à côté du texte */
+  width: 18px;
+  height: 18px;
+  border-radius: 10px;
+  border: var(--red-color) solid 2px;
+  margin-right: 12px;
+}
+ 
+input:checked + .radio-placeholder div {
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background: var(--red-color);
+  margin: 1.8px;
+  animation-name: radio;
+  animation-duration: 0.3s;
+}
+ 
+.radio input {
+  display: none;
+}
+ 
+@keyframes radio {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(100%);
+  }
+}
+ 
+.radio-focus {
+  position: relative;
+  left: 21.5px;
+  bottom: 4px;
+  opacity: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 30px;
+  background-color: #f4423540;
+}
+ 
+.radio-focus:hover {
+  animation-name: radio-hover;
+  animation-duration: 0.5s;
+}
+ 
+@keyframes radio-hover {
+  0% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+ 
+/* l'élément allongé, qui contient le rond se déplace */
+.switch-wrapper {
+  display: inline-block; /* pour que le div soit à côté du texte */
+  width: 30px;
+  height: 20px;
+  padding: 2px;
+  border-radius: 10px;
+  background: var(--red-color);
+  margin-right: 12px;
+}
+ 
+/* le rond qui se déplace */
+.switch-inner {
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  background: var(--red-color);
+}
+ 
+input:checked + .switch-wrapper .switch-inner {
+  margin-left: 10px;
+}
+ 
+.switch input {
+  display: none;
+}
